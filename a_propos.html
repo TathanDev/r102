@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>A Propos de moi</title>
-</head>
-<body>
+    <script type="text/javascript">
+      
+      function UnCryptMailto(s) {
+        var n = 0;
+        var r = "";
+        for (var i = 0; i < s.length; i++) {
+          n = s.charCodeAt(i);
+          if (n >= 8364) {
+            n = 128;
+          }
+          r += String.fromCharCode(n - 1);
+        }
+        return r;
+      }
+
+      function linkTo_UnCryptMailto(s) {
+        location.href = UnCryptMailto(s);
+      }
+      
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/td.css" />
+
+  </head>
+  <body>
     <h1>A Propos de moi</h1>
     <p>Je suis Ethan COSTA.</p>
 
-    <img src="https://avatars.githubusercontent.com/u/67022946?v=4" alt="Mon Avatar">
-</body>
+    <img
+      src="https://avatars.githubusercontent.com/u/67022946?v=4"
+      alt="Mon Avatar"
+    />
+    <a
+      href="javascript:linkTo_UnCryptMailto('nbjmup;fuibo/dptubAfuv/vojdf/gs');"
+      >ethan [dot] costa &commat; etu [dot] unice [dot] fr</a
+    >
+
+    <h2>Mes centre d'intêrets&nbsp;!</h2>
+    <ol>
+      <li>La programmation 🤓</li>
+      <li>La Randonnée ⛰️</li>
+      <li>Le Handball 🤾</li>
+    </ol>
+  </body>
 </html>

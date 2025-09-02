@@ -1,0 +1,13 @@
+p {
+  color: blue;
+  background-color: #fcf9d9;
+}
+
+h1 {
+  /* On veut mettre un cadre coloré au titre. */
+  border-color: rgb(40, 200, 100);
+  /* Par défaut, le cadre est invisible ; on le rend visible. */
+  border-style: solid;
+  /* On centre le texte dans le cadre. */
+  text-align: center;
+}
