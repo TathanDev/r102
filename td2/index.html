@@ -8,50 +8,120 @@
     <link rel="stylesheet" type="text/css" href="../css/td.css" />
   </head>
   <body>
-    <h1>TD 2</h1>
-    <section>
-      <h2>À quoi correspond rgb(120, 56, 13) en hexadécimal ?</h2>
-      <p>rgb(40, 200, 100) est égal à #28C864 en hexadécimal.</p>
-      <ul>
-        <li>
-          Noms de couleur : couleur prédéfini, plutôt explicite à comprendre
-          mais seulement 166 possibilités. Ne supporte pas la transparence.
-        </li>
-        <li>
-          RGB : moins facile a comprendre que les noms de couleurs mais plutôt
-          comprehensif. (255x255x255) = 16 581 375 possibilités. Permet aussi
-          d'utiliser la transparence.
-        </li>
-        <li>
-          hexadécimal : plus difficile à comprendre pour un humain. Possède
-          (16^5) = 16 777 216 possibilitées. Ne supporte pas la transparence.
-        </li>
-      </ul>
-      <h2></h2>
-      <p>16, 12</p>
-      <pre>
+    <main>
+      <h1>TD 2</h1>
+      <section>
+        <h2>À quoi correspond rgb(120, 56, 13) en hexadécimal ?</h2>
+        <p>rgb(40, 200, 100) est égal à #28C864 en hexadécimal.</p>
+        <ul>
+          <li>
+            Noms de couleur : couleur prédéfini, plutôt explicite à comprendre
+            mais seulement 166 possibilités. Ne supporte pas la transparence.
+          </li>
+          <li>
+            RGB : moins facile a comprendre que les noms de couleurs mais plutôt
+            comprehensif. (255x255x255) = 16 581 375 possibilités. Permet aussi
+            d'utiliser la transparence.
+          </li>
+          <li>
+            hexadécimal : plus difficile à comprendre pour un humain. Possède
+            (16^5) = 16 777 216 possibilitées. Ne supporte pas la transparence.
+          </li>
+        </ul>
+        <h2></h2>
+        <p>Il y a 16 noeuds de type ELEMENT et 12 noeuds de type TEXT.</p>
+        <pre>
+              <code>
+                  &#x3C;header&#x3E;
+                      &#x3C;h1&#x3E;Les papous&#x3C;/h1&#x3E;
+                  &#x3C;/header&#x3E;
+                  &#x3C;main&#x3E;
+                      &#x3C;section&#x3E;
+                          &#x3C;h2&#x3E;D&#xE9;finition&#x3C;/h2&#x3E;
+                          &#x3C;p&#x3E;Les &#x3C;em&#x3E;papous&#x3C;/em&#x3E; sont les habitants de Papouasie.&#x3C;/p&#x3E;
+                      &#x3C;/section&#x3E;
+                      &#x3C;section&#x3E;
+                          &#x3C;h2&#x3E;Classification&#x3C;/h2&#x3E;
+                          &#x3C;ul&#x3E;
+                          &#x3C;li&#x3E;Les papous papa.&#x3C;/li&#x3E;
+                          &#x3C;li&#x3E;Les papous pas papa&#x3C;/li&#x3E;
+                          &#x3C;/ul&#x3E;
+                      &#x3C;/section&#x3E;
+                  &#x3C;/main&#x3E;
+                  &#x3C;footer&#x3E;
+                      Site r&#xE9;alis&#xE9; par &#x3C;i&#x3E;C.Levi-Strauss&#x3C;/i&#x3E; en partenariat avec &#x3C;i&#x3E;Franqun&#x3C;/i&#x3E;.
+                  &#x3C;/footer&#x3E;
+              </code> 
+          </pre>
+          <pre>
             <code>
-                &#x3C;header&#x3E;
-                    &#x3C;h1&#x3E;Les papous&#x3C;/h1&#x3E;
-                &#x3C;/header&#x3E;
-                &#x3C;main&#x3E;
-                    &#x3C;section&#x3E;
-                        &#x3C;h2&#x3E;D&#xE9;finition&#x3C;/h2&#x3E;
-                        &#x3C;p&#x3E;Les &#x3C;em&#x3E;papous&#x3C;/em&#x3E; sont les habitants de Papouasie.&#x3C;/p&#x3E;
-                    &#x3C;/section&#x3E;
-                    &#x3C;section&#x3E;
-                        &#x3C;h2&#x3E;Classification&#x3C;/h2&#x3E;
-                        &#x3C;ul&#x3E;
-                        &#x3C;li&#x3E;Les papous papa.&#x3C;/li&#x3E;
-                        &#x3C;li&#x3E;Les papous pas papa&#x3C;/li&#x3E;
-                        &#x3C;/ul&#x3E;
-                    &#x3C;/section&#x3E;
-                &#x3C;/main&#x3E;
-                &#x3C;footer&#x3E;
-                    Site r&#xE9;alis&#xE9; par &#x3C;i&#x3E;C.Levi-Strauss&#x3C;/i&#x3E; en partenariat avec &#x3C;i&#x3E;Franqun&#x3C;/i&#x3E;.
-                &#x3C;/footer&#x3E;
+                ul > li+li+li+li  em {
+                  color: red;
+                }
+
+                ul > li > ul > li em {
+                  color: black;
+                }
+
+                ul > li+li em {
+                  color: cyan;
+                }
             </code>
-        </pre>
-    </section>
+          </pre>
+      </section>
+      <section id="selector">
+        <h2>Les sélecteurs d'attributs</h2>
+        <a target="_blank" href="https://example.com">blank</a>
+        <a target="_self" href="https://example.com" >self</a>
+        <a href="mailto:ethan@gfsds.com">email</a>
+      </section>
+      <section >
+        <h2>Pseudo Classes</h2>
+        <p>p:hover va changer le style des balises &#x3C;p&#x3E; lorsque la souris passe dessus. 
+          p :hover va changer le style "des éléments" se trouvant dans la balise &#x3C;p&#x3E;  lorsque la souris passe dessus</p>
+      </section>
+      <section >
+        <h2>Priorité</h2>
+        <ul>
+          <li>a[href^=data] = (0,1,1)</li>
+          <li>h2+p.note>strong:hover = (0,2,3)</li>
+          <li>#disclaimer::first-letter = (1,1,0)</li>
+          <li>nav>ul>li:nth-child(2)>a::before = (0,2,4)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Combinaison de Selecteur</h2>
+        <ul>
+          <li>main :is(h2+p,h3)::before  =  (0,1,3)</li>
+          <li>main :where(h2+p,h3)::before  = (0,1,1)</li>
+          <li>aside:not(:has(.nouveau,.promotion,.offre-speciale)):hover > h3 = (0,2,2)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Combinaison de Selecteur</h2>
+        <ol>
+          <li>
+            <ul>
+              <li>Ma page : Marron</li>
+              <li>Ceci est un paragraphe. : Violet</li>
+              <li>assez remarquable : Marron</li>
+              <li>Et que dire de celui-ci ? : Bleu</li>
+
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>body : (0,0,1)</li>
+              <li>intro : (1,0,0)</li>
+              <li>p : (0,0,1)</li>
+              <li>p.important : (0,1,1)</li>
+              <li>body .important : (0,1,1)</li>
+
+            </ul>
+          </li>
+          </ol>
+      </section>
+
+  </main>
   </body>
 </html>

@@ -11,3 +11,37 @@ h1 {
   /* On centre le texte dans le cadre. */
   text-align: center;
 }
+
+#selector a[target="_blank"] {
+  color: red;
+}
+
+#selector a[target="_self"] {
+  color: green;
+}
+
+#selector a[href*="mail"] {
+  color: cyan;
+}
+
+h1:hover {
+  color: red;
+}
+
+p :hover {
+  color: green;
+}
+
+blockquote::before {
+  content: '"';
+  color: blueviolet;
+}
+
+blockquote::after {
+  content: '"';
+  color: blueviolet;
+}
+
+blockquote {
+  background-color: cadetblue;
+}
