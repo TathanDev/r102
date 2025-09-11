@@ -1,6 +1,12 @@
 p {
   color: blue;
   background-color: #fcf9d9;
+  margin-left: 30px;
+}
+
+li, ul {
+  margin-left: 30px;
+
 }
 
 h1 {
@@ -10,6 +16,13 @@ h1 {
   border-style: solid;
   /* On centre le texte dans le cadre. */
   text-align: center;
+
+  margin: auto;
+
+  width: 80%;
+  
+  max-width: calc(100% - 40px);
+
 }
 
 #selector a[target="_blank"] {
@@ -22,6 +35,10 @@ h1 {
 
 #selector a[href*="mail"] {
   color: cyan;
+}
+
+h2:hover {
+  color: blue;
 }
 
 h1:hover {
@@ -44,4 +61,16 @@ blockquote::after {
 
 blockquote {
   background-color: cadetblue;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+#avatar {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 10px 10px;
+  
 }

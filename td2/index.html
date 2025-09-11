@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TD 2</title>
 
     <link rel="stylesheet" type="text/css" href="../css/td.css" />
   </head>
@@ -68,6 +68,14 @@
                 }
             </code>
           </pre>
+          <h3>Utilisation de :has</h3>
+          <pre>
+            <code>
+              p:not(:has(em,strong)) {
+                color: grey;
+              }
+            </code>
+          </pre>
       </section>
       <section id="selector">
         <h2>Les sélecteurs d'attributs</h2>
@@ -110,13 +118,20 @@
             </ul>
           </li>
           <li>
+            <h3>Calculez la spécificité de chaque sélecteur du code CSS</h3>
             <ul>
               <li>body : (0,0,1)</li>
               <li>intro : (1,0,0)</li>
               <li>p : (0,0,1)</li>
               <li>p.important : (0,1,1)</li>
               <li>body .important : (0,1,1)</li>
-
+            </ul>
+            <h3>Pour chaque élément HTML, précisez de quel élément il hérite, et quels sélecteurs le concernent directement. Déduisez-en sa couleur.</h3>
+            <ul>
+              <li>h1 hérite de body. Selecteurs : "*", "body"</li>
+              <li>p (#intro) hérite de body. Selecteurs : "#intro"</li>
+              <li>em hérite de p (#intro). Selecteur : "*"</li>
+              <li>p (.important) hérite de body. Selecteurs : "p.important", "body .important"</li>
             </ul>
           </li>
           </ol>
