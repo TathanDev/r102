@@ -23,8 +23,14 @@ img[src*="lifeo"] {
     border-radius: 10px;
 }
 
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
 nav {
-    text-align: end;
+    text-align: start;
+
 }
 
 nav a {
@@ -33,10 +39,41 @@ nav a {
     border-radius: 0 5px 15px 5px;
 }
 
-nav a:hover {
-    padding: 35px;
+nav div,li{
+    text-decoration: none;
+    display: inline-block;
 }
 
-nav:last-child {
+nav div:last-child a {
     background-color: rgb(255, 179, 0);
+}
+
+nav div:hover .bulle {
+    opacity: 1;
+}
+
+
+.submenu {
+    font-size: 20px;
+}
+
+.submenu li {
+   display: block;
+   margin: 0;
+   margin-top: 10px;
+   padding: 5px;
+
+}
+
+.submenu {
+   background-color: rgb(0, 132, 255);
+   margin-top: 30px;
+
+}
+
+.submenu li:hover {
+   color: aliceblue;
+   border-radius: 10px;
+   background-color: rgb(0, 86, 166);
+
 }

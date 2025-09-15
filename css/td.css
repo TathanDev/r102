@@ -25,11 +25,11 @@ h1 {
 
 }
 
-#selector a[target="_blank"] {
+#selector a {
   color: red;
 }
 
-#selector a[target="_self"] {
+#selector a[href*="http"] {
   color: green;
 }
 
@@ -73,4 +73,21 @@ h2 {
   border-radius: 8px;
   box-shadow: 10px 10px;
   
+}
+
+
+.bulle {
+    opacity: 0;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.bulle:hover {
+    opacity: 1;
+}
+
+.bulle:has(+ #avatar:hover) {
+  opacity: 1; 
 }
