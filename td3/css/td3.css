@@ -44,11 +44,11 @@ nav div,li{
     display: inline-block;
 }
 
-nav div:last-child a {
+nav li:last-child a {
     background-color: rgb(255, 179, 0);
 }
 
-nav div:hover .bulle {
+nav li:hover .bulle {
     opacity: 1;
 }
 
@@ -76,4 +76,12 @@ nav div:hover .bulle {
    border-radius: 10px;
    background-color: rgb(0, 86, 166);
 
+}
+
+nav li  {
+    margin-left: 0px;
+}
+
+main {
+    margin-top: 40px;
 }
