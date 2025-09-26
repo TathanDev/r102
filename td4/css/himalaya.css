@@ -1,17 +1,49 @@
-nav>ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-}
 
 header {
     grid-area: header;
-}
-nav>ul>li>ul {
-    display: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
 }
+
+nav {
+    width: 100%;
+        padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 20px;
+
+}
+
+
+nav>ul>li::before {
+    content: "\2630";
+}
+nav>ul>li+li::before {
+    content: "\1F50E ";
+}
+nav>ul>li+li+li::beforeSe connecter {
+    content: "\1F464 ";
+}
+
+
+
+input[type="checkbox"]~ul {
+    display: none;
+}
+
+
 
 body {
     display: grid;
@@ -23,6 +55,8 @@ body {
 
     background-color: black;
     color: aliceblue;
+    height: 100vh;
+    margin: 0;
 }
 
 a {
@@ -37,8 +71,10 @@ main {
     flex-direction: column;
     text-align: center;
     background-image: url(../img/fond.jpg);
-    background-size: 1280px 720px;
+    background-size: cover;
     color: black;
+    background-repeat: no-repeat;
+        
 }
 
 
@@ -49,19 +85,21 @@ main>h1 {
 
 main>h1>strong {
     display: block;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: Lobster;
 }
 
 main>section>ul {
     display: flex;
     flex-direction: row;
     justify-self: center;
-    gap: 60px;    justify-content: space-around;
+    gap: 60px;
+    justify-content: space-around;
 
     list-style: none;
 }
 
-main>section>ul {
+main section ul {
     list-style: none;
 }
 
@@ -70,16 +108,21 @@ main>section>ul>li + li>ul>li{
     list-style: none;
 }
 
+main>section>ul>li+li div {
+    margin-left: -20px;
+}
+
 main>section>ul>li {
     display: flex;
     flex-direction: row;
-
     background-image: url(../img/laurier-gauche.svg),url(../img/laurier-droite.svg);
     background-repeat: no-repeat;
     background-size: 60px;
+        text-align: center;
+
     background-position: left, right;
-    padding-left: 40px;
-    padding-right: 50px;
+    padding-left: 45px;
+    padding-right: 65px;
 }
 
 main>section+section h2 {
@@ -90,17 +133,43 @@ main>section+section {
     text-align: left;
 }
 
-figure {
+main>section>figure>figcaption {
+    font-family: Caveat;
+}
+
+main>section+section>figure {
+    width: 30%;
+    height: 30%;
+}
+
+main>section+section>figure+figure {
+    width: 45%;
+}
+
+main>section+section blockquote {
+    font-family: Caveat;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+section+section{
+    margin-top: -20px;
+}
+
+section>figure {
     background-color: rgb(90, 90, 90, 0.5);
     padding: 10px;
     width: 60%;
-    border-style: dotted;
+    border-style: none dotted;
 }
 figure>figcaption {
     text-align: right;
+    font-family: Lobster;
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
     float: right;
     background-color: #243C4A;
     color: aliceblue;
@@ -109,14 +178,27 @@ aside {
     text-align: center;
 }
 
+aside h2 {
+    font-family: Maven Pro;
+    font-size: 25px;
+
+}
 
 aside a{
     text-decoration: none;
     color: aliceblue;
 }
 
-aside li{
+aside ul{
+    margin-top: 0;
+    padding-left: 0;
     list-style: none;
+    text-align: center;
+}
+
+aside li {
+    font-size: 15px;
+    margin-top: 15px;
 }
 
 body>aside {
@@ -135,6 +217,22 @@ body>aside + aside + aside{
 
 aside > figcaption {
     border-style: none;
+    font-family: Caveat;
+}
+
+aside>figure>figcaption {
+    font-family: Caveat;
+    font-size: 30px;
+}
+
+aside img {
+    border-radius: 5px;
+}
+
+aside figcaption {
+    margin-top: 10px;
+    text-align: center;
+
 }
 
 
@@ -142,5 +240,7 @@ footer {
     grid-area: footer;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
+    z-index: 1;
 }
