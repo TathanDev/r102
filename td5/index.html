@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/td5.css" >
     <title>Document</title>
 </head>
 <body>
     <main>
         <form>
             <fieldset>
-                <label>Nom</label>
-                <input />
+                <label class="require">Nom</label>
+                <input class="textinput" type="text" required >
             </fieldset>
             <fieldset>
-                <label>Courriel</label>
-                <input />
+                <label class="require">Courriel</label>
+                <input class="textinput" type="email" required>
             </fieldset>
             <fieldset>
                 <label>Site Web</label>
-                <input />
+                <input class="textinput" type="url">
             </fieldset>
             <fieldset>
-                <label>Satisfaction</label>
-                <input />
+                <label class="require">Satisfaction</label>
+                <p> - </p> <input type="range"> <p> + </p>
             </fieldset>
             <fieldset>
-                <label>Commentaire</label>
-                <textarea></textarea>
+                <label class="require">Commentaire</label>
+                <textarea class="textinput" rows="5" ></textarea>
             </fieldset>
+            <input type="submit" value="Poste un commentaire">
+        </form>
+
+        <form>
+            
         </form>
     </main>
 </body>

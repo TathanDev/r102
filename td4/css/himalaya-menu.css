@@ -22,7 +22,7 @@ input[type="checkbox"]~ul>li:hover {
 input[type="checkbox"]:checked~ul  {
     margin-left: -80px;
     padding: 0;
-        padding-top: 30px;
+    padding-top: 30px;
 
     display: flex;
     background-color:black;
@@ -31,7 +31,7 @@ input[type="checkbox"]:checked~ul  {
     list-style: none;
     gap: 30px;
     z-index: 0;
-    width: 250px;
+    width: 400px;
     height: 100vh;
 }
 
