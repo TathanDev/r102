@@ -1,5 +1,5 @@
 
-form {
+#commentaires .comment {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -11,35 +11,35 @@ form {
 }
 
 
-label {
+#commentaires label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-label::first-letter {
+#commentaires label::first-letter {
     color: blue;
 }
 
-fieldset {
+#commentaires fieldset {
     border: none;
     width: 90%;
 }
 
 
 
-.require::after {
+#commentaires .require::after {
     content: "  (*)";
     color: darkgrey;
 }
 
-p {
+#commentaires p {
     display: inline;
 }
 
 
 
-input,textarea {
+#commentaires input,textarea {
     width: 90%;
     font-size: 25px;
     height: 30px;
@@ -73,4 +73,67 @@ input[type="submit"] {
 .textinput {
     border-radius: 5px;
     background-color: lightgray;
+}
+
+#reservation {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#reservation fieldset {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+#reservation label {
+    width: 5%;
+}
+
+#reservation input {
+    border-radius: 7px;
+    width: 10%;
+    height: 30px;
+    border: none;
+}
+
+#reservation input:invalid {
+    background-color: lightcoral;
+}
+
+#reservation input:valid {
+    background-color: white;
+}
+
+
+
+#reservation input:invalid~.valide {
+    display: none;
+}
+#reservation input:valid~.valide {
+    display: inline;
+}
+
+#reservation input:invalid~.invalide {
+    display: inline;
+}
+#reservation input:valid~.invalide {
+    display: none;
+}
+
+.invalide,.valide {
+    margin: 0;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#reservation input[type="submit"] {
+    background-color: rgb(131, 121, 240);
+    cursor: not-allowed;
+}
+
+#reservation form:valid input[type="submit"] {
+    background-color: #0800ff;
+    cursor: pointer;
 }

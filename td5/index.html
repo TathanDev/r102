@@ -8,33 +8,68 @@
 </head>
 <body>
     <main>
-        <form>
-            <fieldset>
-                <label class="require">Nom</label>
-                <input class="textinput" type="text" required >
-            </fieldset>
-            <fieldset>
-                <label class="require">Courriel</label>
-                <input class="textinput" type="email" required>
-            </fieldset>
-            <fieldset>
-                <label>Site Web</label>
-                <input class="textinput" type="url">
-            </fieldset>
-            <fieldset>
-                <label class="require">Satisfaction</label>
-                <p> - </p> <input type="range"> <p> + </p>
-            </fieldset>
-            <fieldset>
-                <label class="require">Commentaire</label>
-                <textarea class="textinput" rows="5" ></textarea>
-            </fieldset>
-            <input type="submit" value="Poste un commentaire">
-        </form>
 
-        <form>
-            
-        </form>
+
+        <section id="commentaires">
+            <form class="comment">
+                <fieldset>
+                    <label class="require">Nom</label>
+                    <input class="textinput" type="text" required >
+                </fieldset>
+                <fieldset>
+                    <label class="require">Courriel</label>
+                    <input class="textinput" type="email" required>
+                </fieldset>
+                <fieldset>
+                    <label>Site Web</label>
+                    <input class="textinput" type="url">
+                </fieldset>
+                <fieldset>
+                    <label class="require">Satisfaction</label>
+                    <p> - </p> <input type="range"> <p> + </p>
+                </fieldset>
+                <fieldset>
+                    <label class="require">Commentaire</label>
+                    <textarea class="textinput" rows="5" ></textarea>
+                </fieldset>
+                <input type="submit" value="Poste un commentaire">
+            </form>
+
+        </section>
+
+        <section id="reservation">
+            <form>
+                <fieldset>
+                    <label for="">Téléphone</label>
+                    <input required="true" pattern="0[6-7][0-9]{8}" type="tel">
+                    <p class="valide">✅</p>
+                    <p class="invalide">    ❌</p>    
+                </fieldset>
+                <fieldset>
+                    <label for="Courriel">Courriel</label>
+                    <input required="true" type="email">
+                    <p class="valide">  ✅</p>
+                    <p class="invalide">    ❌</p>
+                </fieldset>
+                <fieldset>
+                    <label for="">Date</label>
+                    <input required="true" type="date">
+                    <p class="valide">  ✅</p>
+                    <p class="invalide">    ❌</p>
+
+                </fieldset>
+                <fieldset>
+                    <label for="">Heure</label>
+                    <!-- tous les quart d'heure -->
+                    <input required="true" step="900" min="09:15" type="time">
+                    <p class="invalide">Les créneaux doivent débuter à :00,:15,:30 ou :45</p>
+                    <p class="valide">  ✅</p>
+
+                </fieldset>
+
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
     </main>
 </body>
 </html>

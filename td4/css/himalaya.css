@@ -28,15 +28,13 @@ nav>ul>li::before {
 nav>ul>li+li::before {
     content: "\1F50E ";
 }
-nav>ul>li+li+li::beforeSe connecter {
+nav>ul>li+li+li::before{
     content: "\1F464 ";
 }
 
 input[type="checkbox"]~ul {
     display: none;
 }
-
-
 
 body {
     display: grid;
