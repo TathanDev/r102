@@ -1,75 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/td5.css" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/td5.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
+      <section id="commentaires">
+        <form class="comment">
+          <fieldset>
+            <label class="require">Nom</label>
+            <input class="textinput" type="text" required />
+          </fieldset>
+          <fieldset>
+            <label class="require">Courriel</label>
+            <input class="textinput" type="email" required />
+          </fieldset>
+          <fieldset>
+            <label>Site Web</label>
+            <input class="textinput" type="url" />
+          </fieldset>
+          <fieldset>
+            <label class="require">Satisfaction</label>
+            <p>-</p>
+            <input type="range" />
+            <p>+</p>
+          </fieldset>
+          <fieldset>
+            <label class="require">Commentaire</label>
+            <textarea class="textinput" rows="5"></textarea>
+          </fieldset>
+          <input type="submit" value="Poste un commentaire" />
+        </form>
+      </section>
 
+      <section id="reservation">
+        <form>
+          <fieldset>
+            <label for="">Téléphone</label>
+            <input required="true" pattern="0[6-7][0-9]{8}" type="tel" />
+            <p class="valide">✅</p>
+            <p class="invalide">❌</p>
+          </fieldset>
+          <fieldset>
+            <label for="Courriel">Courriel</label>
+            <input required="true" type="email" />
+            <p class="valide">✅</p>
+            <p class="invalide">❌</p>
+          </fieldset>
+          <fieldset>
+            <label for="">Date</label>
+            <input required="true" type="date" />
+            <p class="valide">✅</p>
+            <p class="invalide">❌</p>
+          </fieldset>
+          <fieldset>
+            <label for="">Heure</label>
+            <!-- tous les quart d'heure -->
+            <input required="true" step="900" min="09:15" type="time" />
+            <p class="invalide">
+              Les créneaux doivent débuter à :00,:15,:30 ou :45
+            </p>
+            <p class="valide">✅</p>
+          </fieldset>
 
-        <section id="commentaires">
-            <form class="comment">
-                <fieldset>
-                    <label class="require">Nom</label>
-                    <input class="textinput" type="text" required >
-                </fieldset>
-                <fieldset>
-                    <label class="require">Courriel</label>
-                    <input class="textinput" type="email" required>
-                </fieldset>
-                <fieldset>
-                    <label>Site Web</label>
-                    <input class="textinput" type="url">
-                </fieldset>
-                <fieldset>
-                    <label class="require">Satisfaction</label>
-                    <p> - </p> <input type="range"> <p> + </p>
-                </fieldset>
-                <fieldset>
-                    <label class="require">Commentaire</label>
-                    <textarea class="textinput" rows="5" ></textarea>
-                </fieldset>
-                <input type="submit" value="Poste un commentaire">
-            </form>
+          <input type="submit" value="Envoyer" />
+        </form>
+      </section>
+      <section id="table">
+        <table>
+          <!-- Légende -->
+          <caption>
+            Annuaire des membres
+          </caption>
+          <!-- Entête -->
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Date de naissance</th>
+              <th>Téléphone</th>
+            </tr>
+          </thead>
+          <!-- Corps du tableau -->
+          <tbody>
+            <tr>
+              <td>Martin</td>
+              <td>Louis</td>
+              <td>05/12/1960</td>
+              <td>0610234578</td>
+            </tr>
+            <tr>
+              <td>Le Douec</td>
+              <td>Julie</td>
+              <td>18/05/1975</td>
+              <td>0610247013</td>
+            </tr>
+            <tr>
+              <td>Jolivet</td>
+              <td>Leo</td>
+              <td>01/03/1982</td>
+              <td>0745516021</td>
+            </tr>
+            <tr>
+              <td>Merzougui</td>
+              <td>Aïssa</td>
+              <td>23/02/1962</td>
+              <td>0685417844</td>
+            </tr>
+            <tr>
+              <td>Pinto</td>
+              <td>Jose</td>
+              <td>18/11/1976</td>
+              <td>0647814102</td>
+            </tr>
+          </tbody>
+        </table>
 
-        </section>
+        <p>
+          <em>:first-child</em> va prendre le premier enfant du parent mais
+          <em>:first-of-type</em> va prendre le premier enfant de son type.
+        </p>
 
-        <section id="reservation">
-            <form>
-                <fieldset>
-                    <label for="">Téléphone</label>
-                    <input required="true" pattern="0[6-7][0-9]{8}" type="tel">
-                    <p class="valide">✅</p>
-                    <p class="invalide">    ❌</p>    
-                </fieldset>
-                <fieldset>
-                    <label for="Courriel">Courriel</label>
-                    <input required="true" type="email">
-                    <p class="valide">  ✅</p>
-                    <p class="invalide">    ❌</p>
-                </fieldset>
-                <fieldset>
-                    <label for="">Date</label>
-                    <input required="true" type="date">
-                    <p class="valide">  ✅</p>
-                    <p class="invalide">    ❌</p>
+        <p>
+          <em>li ul:first-of-type { color: red; }</em> Va prendre le premier ul
+          dans un li
+        </p>
+        <p>
+          <em>li ul:first-child { color: red; }</em> Va prendre le premier
+          enfant du ul dans le li
+        </p>
 
-                </fieldset>
-                <fieldset>
-                    <label for="">Heure</label>
-                    <!-- tous les quart d'heure -->
-                    <input required="true" step="900" min="09:15" type="time">
-                    <p class="invalide">Les créneaux doivent débuter à :00,:15,:30 ou :45</p>
-                    <p class="valide">  ✅</p>
+        <table id="colspantable">
+          <tr>
+            <td class="blue" colspan="3">300x50</td>
+            <td class="red" rowspan="4">100x200</td>
+          </tr>
+          <tr>
+            <td class="pink" rowspan="2" colspan="2">200x100</td>
+            <td class="green">100x50</td>
+          </tr>
+          <tr>
+            <td class="yellow">100x50</td>
+          </tr>
+          <tr>
+            <td class="orange">100x100</td>
+            <td class="gray" colspan="2">200x100</td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td class="purple">100x50</td>
+          </tr>
+        </table>
+      </section>
+      <section id="media">
+        <video
+          src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          controls
+        ></video>
 
-                </fieldset>
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <img src="img/carte_IUT.png" usemap="#image-map" />
 
-                <input type="submit" value="Envoyer">
-            </form>
-        </section>
+        <map name="image-map">
+          <area
+            target="_blank"
+            alt="INFO"
+            title="INFO"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/informatique/le-departement"
+            coords="101,486,179,521,255,360,176,322"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="GEA"
+            title="GEA"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/gestion-des-entreprises-et-des-administrations/le-departement"
+            coords="294,469,406,224,494,259,386,511"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="TC"
+            title="TC"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/techniques-de-commercialisation-nice/le-departement"
+            coords="542,352,599,211,687,252,620,389"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="GEII"
+            title="GEII"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/genie-electrique-et-informatique-industrielle/le-departement"
+            coords="690,386,909,490,879,559,757,500,721,577,844,630,853,612,914,637,997,463,943,436,951,415,725,310"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="CROUS"
+            title="CROUS"
+            href="https://www.crous-nice.fr/restaurant/cafeteria-iut/?lang=fr"
+            coords="465,630,515,547,658,646,604,723"
+            shape="poly"
+          />
+        </map>
+      </section>
     </main>
-</body>
+  </body>
 </html>

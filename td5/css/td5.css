@@ -1,139 +1,260 @@
-
 #commentaires .comment {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    border-width: 2px;
-    border-style: solid;
-    width: 20%;
-    align-items: left;
-    font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  width: 20%;
+  align-items: left;
+  font-size: 30px;
 }
 
-
 #commentaires label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 #commentaires label::first-letter {
-    color: blue;
+  color: blue;
 }
 
 #commentaires fieldset {
-    border: none;
-    width: 90%;
+  border: none;
+  width: 90%;
 }
 
-
-
 #commentaires .require::after {
-    content: "  (*)";
-    color: darkgrey;
+  content: "  (*)";
+  color: darkgrey;
 }
 
 #commentaires p {
-    display: inline;
+  display: inline;
 }
 
-
-
-#commentaires input,textarea {
-    width: 90%;
-    font-size: 25px;
-    height: 30px;
-    border-width: 0px;
-    border-color: gray none none gray;
+#commentaires input,
+textarea {
+  width: 90%;
+  font-size: 25px;
+  height: 30px;
+  border-width: 0px;
+  border-color: gray none none gray;
 }
 
 textarea {
-    height: 100px;
+  height: 100px;
 }
 
 input[type="range"] {
-    width: 80%;
-    
-    align-self: center;
+  width: 80%;
+
+  align-self: center;
 }
 
 input[type="submit"] {
-    background-color: #8baff2;
-    border-width: 0px;
-    border-radius: 7px;
-    align-self: center;
-    width: 70%;
-    height: 40px;
-    padding: 10px;
-    color: white;
-    margin-bottom: 10px;
-    box-shadow: darkgray 1px 1px ;
+  background-color: #8baff2;
+  border-width: 0px;
+  border-radius: 7px;
+  align-self: center;
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+  box-shadow: darkgray 1px 1px;
 }
 
 .textinput {
-    border-radius: 5px;
-    background-color: lightgray;
+  border-radius: 5px;
+  background-color: lightgray;
 }
 
 #reservation {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #reservation fieldset {
-    border: none;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
 }
 
 #reservation label {
-    width: 5%;
+  width: 5%;
 }
 
 #reservation input {
-    border-radius: 7px;
-    width: 10%;
-    height: 30px;
-    border: none;
+  border-radius: 7px;
+  width: 10%;
+  height: 30px;
+  border: none;
 }
 
 #reservation input:invalid {
-    background-color: lightcoral;
+  background-color: lightcoral;
 }
 
 #reservation input:valid {
-    background-color: white;
+  background-color: white;
 }
 
-
-
-#reservation input:invalid~.valide {
-    display: none;
+#reservation input:invalid ~ .valide {
+  display: none;
 }
-#reservation input:valid~.valide {
-    display: inline;
+#reservation input:valid ~ .valide {
+  display: inline;
 }
 
-#reservation input:invalid~.invalide {
-    display: inline;
+#reservation input:invalid ~ .invalide {
+  display: inline;
 }
-#reservation input:valid~.invalide {
-    display: none;
+#reservation input:valid ~ .invalide {
+  display: none;
 }
 
-.invalide,.valide {
-    margin: 0;
-    font-size: 20px;
-    margin-left: 40px;
+.invalide,
+.valide {
+  margin: 0;
+  font-size: 20px;
+  margin-left: 40px;
 }
 
 #reservation input[type="submit"] {
-    background-color: rgb(131, 121, 240);
-    cursor: not-allowed;
+  background-color: rgb(131, 121, 240);
+  cursor: not-allowed;
 }
 
 #reservation form:valid input[type="submit"] {
-    background-color: #0800ff;
-    cursor: pointer;
+  background-color: #0800ff;
+  cursor: pointer;
+}
+
+/* --- Mise en forme générale du tableau --- */
+table {
+  width: 80%;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Toutes les cellules */
+td,
+th {
+  padding: 10px 15px;
+  border: 1px solid #ffffff;
+}
+
+th {
+  background-color: rgb(236, 128, 109);
+  text-align: left;
+}
+
+/* Dernière colonne = colonne téléphone */
+td:last-child,
+th:last-child {
+  text-align: center;
+}
+
+/* Ajouter l'icône téléphone */
+td:last-child::before {
+  content: "✆ ";
+  font-weight: bold;
+  color: #e9c85d;
+}
+
+tr {
+  background-color: #e9d8be;
+}
+
+tr :nth-child(2n) {
+  font-style: italic;
+}
+
+tr:nth-child(2n) {
+  background-color: #e7e2b5;
+}
+
+tr :first-child:not(th)::first-letter {
+  font-size: x-large;
+  font-weight: bold;
+  color: red;
+}
+
+
+#colspantable {
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: white;
+  width: 400px;
+  height: 250px;
+
+}
+
+
+
+#colspantable tr {
+  width: 100px;
+  height: 50px;
+
+}
+
+#colspantable td {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.blue {
+  background-color: #0000ff;
+  color: white;
+  width: 300px;
+  height: 50px;
+}
+
+.pink {
+  background-color: #ffb6c1;
+  width: 200px;
+  height: 100px;
+}
+
+.red {
+  background-color: #ff0000;
+  color: white;
+  width: 100px;
+  height: 200px;
+}
+
+.green {
+  background-color: #006400;
+  color: white;
+  width: 100px;
+}
+
+.yellow {
+  background-color: #ffff00;
+  width: 100px;
+}
+
+.orange {
+  background-color: #ffa500;
+  width: 100px;
+height: 100px;
+
+}
+
+.gray {
+  background-color: #808080;
+  color: white;
+  width: 200px;
+  height: 100px;
+}
+
+.purple {
+  background-color: #800080;
+  color: white;
+  width: 100px;
+    height: 50px;
 }
