@@ -1,87 +1,125 @@
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 main {
-    width: 80%;
-    min-width: 500px;
-    max-width: 1000%;
+  width: 80%;
+  max-width: 1000%;
 }
 
 h1 {
- border: 2px red 4px yellow; 
+  border: 2px red 4px yellow;
 }
 
-
 img[src*="bird"] {
-    clip-path: xywh(0 5px 100% 75% round 15% 0);
+  clip-path: xywh(0 5px 100% 75% round 15% 0);
 }
 
 img[src*="lifeo"] {
-    width: 30%;
-    margin-left: 10px;
-    border-radius: 10px;
+  width: 30%;
+  margin-left: 10px;
+  border-radius: 10px;
 }
 
+/**
+ * Navbar
+*/
 nav ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1px;
+}
+
+nav li {
+  margin-left: 0px;
 }
 
 nav {
-    text-align: start;
-
+  text-align: start;
 }
 
-nav a {
-    background-color: rgb(0, 132, 255);
-    padding: 30px;
-    border-radius: 0 5px 15px 5px;
+.td-link {
+  background-color: rgb(0, 132, 255);
+  padding: 30px;
+  border-radius: 0 5px 15px 5px;
 }
 
-nav div,li{
-    text-decoration: none;
-    display: inline-block;
+nav div,
+li {
+  text-decoration: none;
+  display: inline-block;
 }
 
 nav li:last-child a {
-    background-color: rgb(255, 179, 0);
+  background-color: rgb(255, 179, 0);
 }
 
 nav li:hover .bulle {
-    opacity: 1;
+  opacity: 1;
 }
 
 
 .submenu {
-    font-size: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;   
 }
 
 .submenu li {
-   display: block;
-   margin: 0;
-   margin-top: 10px;
-   padding: 5px;
-
+  display: block;
+  margin: 0;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .submenu {
-   background-color: rgb(0, 132, 255);
-   margin-top: 30px;
-
+  background-color: rgb(0, 132, 255);
+  margin-top: 30px;
 }
 
 .submenu li:hover {
-   color: aliceblue;
-   border-radius: 10px;
-   background-color: rgb(0, 86, 166);
-
-}
-
-nav li  {
-    margin-left: 0px;
+  color: aliceblue;
+  border-radius: 10px;
+  background-color: rgb(0, 86, 166);
 }
 
 main {
-    margin-top: 40px;
+  margin-top: 40px;
+}
+
+body {
+  margin-right: 0;
+}
+
+@media (max-width: 660px) {
+  section,
+  main,
+  img,
+  h1 {
+    width: 90vw;
+  }
+
+  body {
+    margin-right: 0;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  nav a {
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  nav a {
+    display: block; /* Important : passage en block */
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box; /* Évite les débordements avec le padding */
+  }
 }

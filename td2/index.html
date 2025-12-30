@@ -10,7 +10,7 @@
   <body>
     <main>
       <h1>TD 2</h1>
-      <section>
+      <section id="couleurs">
         <h2>À quoi correspond rgb(120, 56, 13) en hexadécimal ?</h2>
         <p>rgb(40, 200, 100) est égal à #28C864 en hexadécimal.</p>
         <ul>
@@ -83,12 +83,12 @@
         <a target="_self" href="https://example.com" >externe</a>
         <a href="mailto:ethan@gfsds.com">email</a>
       </section>
-      <section >
+      <section id="pseudo-classes">
         <h2>Pseudo Classes</h2>
         <p>p:hover va changer le style des balises &#x3C;p&#x3E; lorsque la souris passe dessus. 
           p :hover va changer le style "des éléments" se trouvant dans la balise &#x3C;p&#x3E;  lorsque la souris passe dessus</p>
       </section>
-      <section >
+      <section id="priorite">
         <h2>Priorité</h2>
         <ul>
           <li>a[href^=data] = (0,1,1)</li>
@@ -97,7 +97,7 @@
           <li>nav>ul>li:nth-child(2)>a::before = (0,2,4)</li>
         </ul>
       </section>
-      <section>
+      <section id="combinaison-1">
         <h2>Combinaison de Selecteur</h2>
         <ul>
           <li>main :is(h2+p,h3)::before  =  (0,1,3)</li>
@@ -105,7 +105,7 @@
           <li>aside:not(:has(.nouveau,.promotion,.offre-speciale)):hover > h3 = (0,2,2)</li>
         </ul>
       </section>
-      <section>
+      <section id="combinaison-2">
         <h2>Combinaison de Selecteur</h2>
         <ol>
           <li>

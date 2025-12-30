@@ -89,3 +89,9 @@ h2 {
 .bulle:has(+ #avatar:hover) {
   opacity: 1; 
 }
+
+@media (max-width: 600px) {
+    code, pre {
+      font-size: 10px;
+    }
+}
