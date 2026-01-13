@@ -133,7 +133,7 @@ input[type="submit"] {
 }
 
 /* --- Mise en forme générale du tableau --- */
-table {
+#annuaire table {
   width: 80%;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -141,117 +141,63 @@ table {
 }
 
 /* Toutes les cellules */
-td,
-th {
+#annuaire td,
+#annuaire th {
   padding: 10px 15px;
   border: 1px solid #ffffff;
 }
 
-th {
+#annuaire th {
   background-color: rgb(236, 128, 109);
   text-align: left;
 }
 
 /* Dernière colonne = colonne téléphone */
-td:last-child,
-th:last-child {
+#annuaire td:last-child,
+#annuaire th:last-child {
   text-align: center;
 }
 
 /* Ajouter l'icône téléphone */
-td:last-child::before {
+#annuaire td:last-child::before {
   content: "✆ ";
   font-weight: bold;
   color: #e9c85d;
 }
 
-tr {
+#annuaire tr {
   background-color: #e9d8be;
 }
 
-tr :nth-child(2n) {
+#annuaire tr:nth-child(2n) {
   font-style: italic;
 }
 
-tr:nth-child(2n) {
+#annuaire tr:nth-child(2n) {
   background-color: #e7e2b5;
 }
 
-tr :first-child:not(th)::first-letter {
+#annuaire tr :first-child:not(th)::first-letter {
   font-size: x-large;
   font-weight: bold;
   color: red;
 }
 
-#colspantable {
-  border-collapse: collapse;
-  margin: 20px auto;
-  background-color: white;
+.complexe {
   width: 400px;
-  height: 250px;
-}
-
-#colspantable tr {
-  width: 100px;
-  height: 50px;
-}
-
-#colspantable td {
-  text-align: center;
-  vertical-align: middle;
-  font-weight: bold;
-}
-
-.blue {
-  background-color: #0000ff;
-  color: white;
-  width: 300px;
-  height: 50px;
-}
-
-.pink {
-  background-color: #ffb6c1;
-  width: 200px;
-  height: 100px;
-}
-
-.red {
-  background-color: #ff0000;
-  color: white;
-  width: 100px;
   height: 200px;
 }
 
-.green {
-  background-color: #006400;
-  color: white;
-  width: 100px;
-}
+.bleu    { background: blue;        width: 300px; height: 50px; }
+.rouge   { background: red;         width: 100px; height: 200px; }
+.rose    { background: pink;        width: 200px; height: 100px; }
+.vert    { background: green;       width: 100px; height: 50px; }
+.jaune   { background: yellow;      width: 100px; height: 50px; }
+.orange  { background: orange;      width: 100px; height: 100px; }
+.gris    { background: gray;        width: 200px; height: 100px; }
+.violet  { background: purple;      width: 100px; height: 50px; }
 
-.yellow {
-  background-color: #ffff00;
-  width: 100px;
-}
 
-.orange {
-  background-color: #ffa500;
-  width: 100px;
-  height: 100px;
-}
-
-.gray {
-  background-color: #808080;
-  color: white;
-  width: 200px;
-  height: 100px;
-}
-
-.purple {
-  background-color: #800080;
-  color: white;
-  width: 100px;
-  height: 50px;
-}
 
 img {
   max-width: 100%;

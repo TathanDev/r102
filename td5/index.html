@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav>
-      <ul class="local-nav">
+      <ul>
         <li>
           <a class="td-link">TD 1</a>
           <ul class="bulle submenu">
@@ -55,7 +55,7 @@
           </ul>
         </li>
 
-          <li>
+        <li>
           <a class="td-link">TD 3</a>
           <ul class="bulle submenu">
             <li>
@@ -72,7 +72,6 @@
             </li>
           </ul>
         </li>
-
 
         <li>
           <a class="td-link">TD 5</a>
@@ -161,7 +160,7 @@
         </form>
       </section>
       <section id="table">
-        <table>
+        <table id="annuaire">
           <!-- Légende -->
           <caption>
             Annuaire des membres
@@ -224,25 +223,24 @@
           enfant du ul dans le li
         </p>
 
-        <table id="colspantable">
+        <table class="complexe">
           <tr>
-            <td class="blue" colspan="3">300x50</td>
-            <td class="red" rowspan="4">100x200</td>
+            <td colspan="3" class="bleu">300x50</td>
+            <td rowspan="4" class="rouge">100x200</td>
           </tr>
           <tr>
-            <td class="pink" rowspan="2" colspan="2">200x100</td>
-            <td class="green">100x50</td>
+            <td colspan="2" rowspan="2" class="rose">200x100</td>
+            <td class="vert">100x50</td>
           </tr>
           <tr>
-            <td class="yellow">100x50</td>
+            <td class="jaune">100x50</td>
           </tr>
           <tr>
-            <td class="orange">100x100</td>
-            <td class="gray" colspan="2">200x100</td>
+            <td rowspan="2" class="orange">100x100</td>
+            <td colspan="2" rowspan="2" class="gris">200x100</td>
           </tr>
           <tr>
-            <td colspan="3"></td>
-            <td class="purple">100x50</td>
+            <td class="violet">100x50</td>
           </tr>
         </table>
       </section>

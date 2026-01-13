@@ -1,3 +1,4 @@
+
 p {
   color: blue;
   background-color: #fcf9d9;
@@ -9,19 +10,32 @@ ul {
   margin-left: 30px;
 }
 
+a {
+  color: rgb(0, 0, 255);
+    font-size: 20px;
+
+}
+
 h1 {
   /* On veut mettre un cadre coloré au titre. */
-  border-color: rgb(40, 200, 100);
+  border-color: rgb(30, 0, 255);
   /* Par défaut, le cadre est invisible ; on le rend visible. */
   border-style: solid;
   /* On centre le texte dans le cadre. */
   text-align: center;
 
+  border-width: 5px;
+
   margin: auto;
 
   width: 80%;
+  margin-bottom: 30px;
 
   max-width: calc(100% - 40px);
+}
+
+h1:hover {
+  color: rgb(0, 89, 255);
 }
 
 #selector a {
@@ -40,11 +54,13 @@ h2:hover {
   color: blue;
 }
 
-h1:hover {
-  color: red;
+p {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-p :hover {
+p:hover {
   color: green;
 }
 
@@ -59,7 +75,10 @@ blockquote::after {
 }
 
 blockquote {
-  background-color: cadetblue;
+  background-color: rgb(5, 13, 255);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
 }
 
 h2 {
@@ -123,6 +142,10 @@ nav div,
 li {
   text-decoration: none;
   display: inline-block;
+}
+
+nav li a {
+  text-decoration: none;
 }
 
 nav li:last-child a {
